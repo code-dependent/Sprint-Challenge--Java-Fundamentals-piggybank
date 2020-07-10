@@ -1,32 +1,42 @@
 package javaFundamentals;
 
-abstract class AbstractMoney{
+abstract class AbstractMoney
+{
     protected int quantity;
     protected String name;
     protected double value;
 
-    public AbstractMoney(String name, double value, int quantity){
+    public AbstractMoney(String name, double value, int quantity)
+    {
         this.name = name;
         this.value = value;
         this.quantity = quantity;
     }
-    public AbstractMoney(){
+    public AbstractMoney()
+    {
         quantity = 1;
     }
-    public String getName(){
+    public String getName()
+    {
         return name;
     }
-    public double getTotal(){
+    public double getTotal()
+    {
         return quantity*value;
     }
-    public double getValue(){
+    public double getValue()
+    {
         return value;
     }
     @Override
-    public String toString(){
-        if(quantity>1){
+    public String toString()
+    {
+        if(quantity>1)
+        {
             return quantity + " " + name + 's';
-        }else{
+        }
+        else
+        {
             return quantity + " " + name;
         }
     }
